@@ -18,7 +18,7 @@
 			2 ：AdminUser 
 				管理人员，即团队成员
 				可查看删除所有人文章，授权用户
-		     nameId 用户编号
+		     userId 用户编号
 		
 */
 //User接口,定义了三个抽象方法.
@@ -35,7 +35,7 @@ abstract class AbstractUser implements User{
 	private $email = ""; //邮箱地址
 	private $password = "";//密码
 	protected  $roleId = ""; //角色编号
-	protected  $nameId = "";  //用户编号
+	protected  $userId = "";  //用户编号
 	
 	public function __construct($_name,$_email,$_password){
 		$this->setName($_name);
@@ -67,12 +67,12 @@ abstract class AbstractUser implements User{
 		return $this->roleId;
 	}
 	
-	public function getNameId(){
-		return $this->nameId;
+	public function getUserId(){
+		return $this->userId;
 	}
 	
-	protected function setNameId($_nameId){
-		$this->nameId = $_nameId
+	protected function setUserId($_userId){
+		$this->userId = $_userId
 	}
 }
 class NormalUser extends AbstractUser  {	
@@ -90,4 +90,3 @@ class AdminUser extends AbstractUser {
 	
 }
 ?>
-

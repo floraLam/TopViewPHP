@@ -1,9 +1,5 @@
-
-<!DOCTYPE html>
-<html>
-    <meta charset = "utf-8">
-<body>
-    <?php
+<?php
+    
         /*
          get serializable time while commonly used formats
         */
@@ -11,5 +7,3 @@
            return date("Y-m-d h:i:sa");
        }
     ?>
-</body>
-</html>
